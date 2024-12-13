@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="primary">#ff0068FF</color>
+
+    <color name="student_blue">#FF2F84FF</color>
+    <color name="student_purple">#ff9e05fa</color>
+    <color name="student_red">#FFFF3831</color>
+    <color name="student_green">#FF3FF26E</color>
+
+    <color name="student_blue_transparent">#002F84FF</color>
+    <color name="student_purple_transparent">#009e05fa</color>
+    <color name="student_red_transparent">#00FF3831</color>
+    <color name="student_green_transparent">#003FF26E</color>
+
+    <color name="textInput">#ffE6E6E6</color>
+</resources>

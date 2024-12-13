@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">StudentLead</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="student_lead_logo">Student Lead logo</string>
+    <string name="identifier">Identifier</string>
+    <string name="identifier_hint">20220325@nctu.edu.eg</string>
+    <string name="password_label">Password</string>
+    <string name="password_hint">••••••••</string>
+    <string name="what_is_identifier">What is identifier?</string>
+    <string name="sign_in_button">Sign in</string>
+</resources>
