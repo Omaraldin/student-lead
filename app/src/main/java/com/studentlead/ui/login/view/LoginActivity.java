@@ -55,7 +55,7 @@ public class LoginActivity extends AppCompatActivity {
     private void setupViews() {
         identifierAlertBuilder = new MaterialAlertDialogBuilder(this);
         identifierAlertBuilder.setTitle(R.string.what_is_identifier);
-        identifierAlertBuilder.setMessage("Identifier is either Email Address, National ID, or Student code");
+        identifierAlertBuilder.setMessage(R.string.identifier_description);
         identifierAlertBuilder.setPositiveButton("OK", (dialog, which) -> dialog.dismiss());
 
         binding.whatIsIdentifier.setOnClickListener(view -> identifierAlertBuilder.create().show());
@@ -74,6 +74,10 @@ public class LoginActivity extends AppCompatActivity {
 
             if (state.getError() != null) {
                 Toast.makeText(this, state.getError(), Toast.LENGTH_LONG).show();
+            }
+
+            if (state.getErrorResource() != -1) {
+                Toast.makeText(this, getString(state.getErrorResource()), Toast.LENGTH_LONG).show();
             }
 
             if (state.isSuccess()) {

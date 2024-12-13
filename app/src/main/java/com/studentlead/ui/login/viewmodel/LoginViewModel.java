@@ -5,6 +5,7 @@ import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
 import com.google.firebase.firestore.DocumentSnapshot;
+import com.studentlead.R;
 import com.studentlead.data.model.LoginState;
 import com.studentlead.data.repository.LoginRepository;
 import com.studentlead.util.Patterns;
@@ -30,7 +31,7 @@ public class LoginViewModel extends ViewModel {
 
     public void login(String identifier, String password) {
         if (identifier == null || identifier.trim().isEmpty() || password == null || password.trim().isEmpty()) {
-            loginState.setValue(LoginState.error("Please fill in all fields"));
+            loginState.setValue(LoginState.errorResource(R.string.required_fields));
             return;
         }
 
@@ -43,7 +44,7 @@ public class LoginViewModel extends ViewModel {
         } else if (Patterns.STUDENT_CODE.matcher(identifier).matches()) {
             tryStudentCode(identifier, password);
         } else {
-            loginState.setValue(LoginState.error("No user found with this identifier"));
+            loginState.setValue(LoginState.errorResource(R.string.user_identifier_not_found));
         }
 
     }
@@ -57,10 +58,10 @@ public class LoginViewModel extends ViewModel {
                         if (email != null) {
                             loginWithEmail(email, password);
                         } else {
-                            loginState.setValue(LoginState.error("Email not found for this national ID"));
+                            loginState.setValue(LoginState.errorResource(R.string.email_not_found_nid));
                         }
                     } else {
-                        loginState.setValue(LoginState.error("No user found with this identifier"));
+                        loginState.setValue(LoginState.errorResource(R.string.no_user_nid));
                     }
                 })
                 .addOnFailureListener(e -> loginState.setValue(LoginState.error(e.getMessage())));
@@ -75,10 +76,10 @@ public class LoginViewModel extends ViewModel {
                         if (email != null) {
                             loginWithEmail(email, password);
                         } else {
-                            loginState.setValue(LoginState.error("Email not found for this student code"));
+                            loginState.setValue(LoginState.errorResource(R.string.email_not_found_sc));
                         }
                     } else {
-                        loginState.setValue(LoginState.error("No user found with this identifier"));
+                        loginState.setValue(LoginState.errorResource(R.string.user_not_found_sc));
                     }
                 })
                 .addOnFailureListener(e -> loginState.setValue(LoginState.error(e.getMessage())));

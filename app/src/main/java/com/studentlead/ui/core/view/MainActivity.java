@@ -38,7 +38,8 @@ public class MainActivity extends AppCompatActivity {
         viewModel.getIsLoggedIn().observe(this,
                 isLoggedIn -> {
                     if (isLoggedIn) {
-                        startActivity(new Intent(this, HomeActivity.class));
+
+                        startActivity(new Intent(this, LoginActivity.class));
                         finish();
                     } else {
                         startActivity(new Intent(this, LoginActivity.class));

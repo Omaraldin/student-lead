@@ -16,4 +16,14 @@
     <string name="password_hint">••••••••</string>
     <string name="what_is_identifier">What is identifier?</string>
     <string name="sign_in_button">Sign in</string>
+    <string name="required_fields">Please fill in all fields</string>
+    <string name="user_identifier_not_found">No user found with this identifier</string>
+    <string name="email_not_found_nid">Email not found for this national ID</string>
+    <string name="no_user_nid">No user found with this identifier</string>
+    <string name="email_not_found_sc">Email not found for this student code</string>
+    <string name="user_not_found_sc">No user found with this identifier</string>
+    <string name="identifier_description">Identifier is either Email Address, National ID, or Student code</string>
+    <string name="create_account">Create account</string>
+    <string name="find_student_code">Find student code</string>
+    <string name="forgot_password">Forgot password?</string>
 </resources>
