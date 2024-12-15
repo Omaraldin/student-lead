@@ -3,10 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#FFFFFF"
+    android:background="@drawable/rgb_gradient"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".ui.home.view.HomeActivity">
-
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/top_bar"
@@ -77,6 +76,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:padding="10dp">
+
 
 
 
@@ -221,12 +221,59 @@
 
     </LinearLayout>
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation"
-        android:layout_width="wrap_content"
-        android:layout_height="70dp"
-        android:background="@drawable/rounded_toolbar"
-        app:menu="@menu/toolbar_menu"
-        android:layout_alignParentBottom="true"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/posts_section1">
+
+        <!-- عناصر أخرى في الشاشة -->
+
+        <!-- الشريط العلوي ليظهر في الأسفل -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/top_bar1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_toolbar"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <!-- صورة الملف الشخصي على الشمال -->
+            <ImageView
+                android:id="@+id/course_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="15dp"
+                android:src="@drawable/ic_course"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <!-- أيقونة الإشعارات على اليمين -->
+            <ImageView
+                android:id="@+id/event_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/ic_event"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <!-- النص في المنتصف -->
+            <ImageView
+                android:id="@+id/home_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/ic_home"
+                android:layout_marginBottom="15dp"
+                app:layout_constraintStart_toEndOf="@id/course_icon"
+                app:layout_constraintEnd_toStartOf="@id/event_icon"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.5" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </RelativeLayout>

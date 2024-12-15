@@ -44,6 +44,8 @@ dependencies {
     implementation(libs.constraintlayout)
     implementation(libs.annotation)
 
+    implementation("androidx.appcompat:appcompat:1.6.1")
+
     testImplementation(libs.junit)
 
     androidTestImplementation(libs.ext.junit)
