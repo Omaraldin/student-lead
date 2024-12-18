@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.StudentLead" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="colorPrimary">@color/primary</item>
-        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorOnPrimary">#211f60</item>
 
     </style>
 
