@@ -22,7 +22,7 @@
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:reverseLayout="true"
                 app:stackFromEnd="true"
-                tools:listitem="@layout/row_post" />
+                tools:listitem="@layout/row_post"/>
         </RelativeLayout>
     </androidx.core.widget.NestedScrollView>
 

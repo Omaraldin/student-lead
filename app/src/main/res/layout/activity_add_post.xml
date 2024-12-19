@@ -28,18 +28,18 @@
                 android:background="?attr/selectableItemBackgroundBorderless" />
 
             <!--Here is the button to add a picture-->
-<!--            <ImageButton-->
-<!--                android:id="@+id/cam_id"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_alignParentEnd="true"-->
-<!--                android:layout_centerInParent="true"-->
-<!--                android:layout_gravity="end"-->
-<!--                android:tooltipText="Pick an image"-->
-<!--                android:background="?attr/selectableItemBackgroundBorderless"-->
-<!--                android:layout_marginEnd="20dp"-->
-<!--                android:importantForAccessibility="no"-->
-<!--                android:src="@drawable/ic_add_cam" />-->
+            <ImageButton
+                android:id="@+id/file_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:layout_gravity="end"
+                android:tooltipText="Pick an image"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_marginEnd="20dp"
+                android:importantForAccessibility="no"
+                android:src="@drawable/ic_add_cam" />
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -63,87 +63,12 @@
                 app:spanCount="4"
                 tools:listitem="@layout/row_img"/>
 
-
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/name_pet"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:id="@+id/sub_auto"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/num_pho"
-                android:layout_marginTop="10dp"
-                android:hint="Title"
-                app:boxBackgroundColor="@color/grey"
-                app:boxCornerRadiusBottomEnd="8dp"
-                app:boxCornerRadiusBottomStart="8dp"
-                app:boxCornerRadiusTopEnd="8dp"
-                app:boxCornerRadiusTopStart="8dp"
-                app:endIconMode="clear_text"
-                app:helperTextTextColor="@color/red"
-                app:startIconDrawable="@drawable/round_title_black_24dp">
-
-                <EditText
-                    android:id="@+id/name_id"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:importantForAutofill="no"
-                    android:inputType="text" />
-
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/practical_auto"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/name_pet"
-                android:hint="Type"
-                app:boxCornerRadiusBottomStart="8dp"
-                app:boxCornerRadiusBottomEnd="8dp"
-                app:helperTextTextColor="@color/red"
-                app:boxBackgroundColor="@color/grey"
-                app:boxCornerRadiusTopStart="8dp"
-                app:boxCornerRadiusTopEnd="8dp"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
-
-                <AutoCompleteTextView
-                    android:id="@+id/practical_id"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="none" />
-
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/price_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/practical_auto"
-                android:hint="@string/price"
-                app:endIconMode="clear_text"
-                app:boxBackgroundColor="@color/grey"
-                app:boxCornerRadiusBottomStart="8dp"
-                app:boxCornerRadiusBottomEnd="8dp"
-                app:boxCornerRadiusTopStart="8dp"
-                app:startIconDrawable="@drawable/ic_sale"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                app:boxCornerRadiusTopEnd="8dp">
-
-                <EditText
-                    android:id="@+id/price_id"
-                    android:layout_width="match_parent"
-                    android:inputType="numberDecimal"
-                    android:layout_height="wrap_content" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/breed_auto"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/price_text"
-                android:hint="Breed"
+                android:hint="Subject"
                 app:boxCornerRadiusBottomStart="8dp"
                 app:boxBackgroundColor="@color/grey"
                 app:boxCornerRadiusBottomEnd="8dp"
@@ -153,63 +78,10 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
 
                 <AutoCompleteTextView
-                    android:id="@+id/breed_id"
+                    android:id="@+id/sub_id"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="none" />
-
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/loc_auto"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/breed_auto"
-                android:hint="@string/location"
-                app:boxBackgroundColor="@color/grey"
-                app:boxCornerRadiusBottomStart="8dp"
-                app:helperTextTextColor="@color/red"
-                app:startIconDrawable="@drawable/ic_location"
-                app:boxCornerRadiusBottomEnd="8dp"
-                app:boxCornerRadiusTopStart="8dp"
-                app:boxCornerRadiusTopEnd="8dp"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
-
-                <AutoCompleteTextView
-                    android:id="@+id/loc_id"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="none" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/phone_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/loc_auto"
-                android:hint="@string/phone"
-                app:boxBackgroundColor="@color/grey"
-                app:boxCornerRadiusBottomStart="8dp"
-                app:boxCornerRadiusBottomEnd="8dp"
-                app:boxCornerRadiusTopStart="8dp"
-                app:counterEnabled="true"
-                app:counterMaxLength="11"
-                app:endIconMode="clear_text"
-                app:errorEnabled="true"
-                app:helperTextTextColor="@color/red"
-                app:prefixText="+20"
-                app:startIconDrawable="@drawable/ic_call"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                app:boxCornerRadiusTopEnd="8dp">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/phone_id"
-                    android:layout_width="match_parent"
-                    android:inputType="phone"
-                    android:maxLength="11"
-                    android:layout_height="wrap_content" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -217,7 +89,7 @@
                 android:id="@+id/description_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/phone_text"
+                android:layout_below="@id/sub_auto"
                 android:hint="@string/description"
                 app:boxBackgroundColor="@color/grey"
                 app:boxCornerRadiusBottomStart="8dp"
@@ -251,7 +123,6 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:layout_gravity="bottom"
-        android:background="@drawable/buttons"
         android:minHeight="60dp"
         android:text="Publish"
         android:layout_marginBottom="50dp"

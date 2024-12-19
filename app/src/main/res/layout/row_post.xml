@@ -3,20 +3,19 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     app:cardCornerRadius="10dp"
     android:elevation="0dp"
     app:cardUseCompatPadding="true">
 
     <LinearLayout
         android:id="@+id/posts_section"
-        android:layout_below="@id/posts_label"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="10dp">
 
         <LinearLayout
-            android:id="@+id/post_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -43,20 +42,34 @@
                     android:text="@string/prof_name"
                     android:textStyle="bold"/>
 
-                <!-- اسم المادة -->
                 <TextView
                     android:id="@+id/subject_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Subject: Math"
+                    android:text="@{post.subject}"
                     android:textStyle="italic"/>
 
                 <TextView
                     android:id="@+id/task_description"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="The Task or Assignment"
+                    android:text="@{post.description}"
                     android:maxLines="1"/>
+
+                <ImageView
+                    android:id="@+id/file_img"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_img"/>
+
+<!--                <androidx.recyclerview.widget.RecyclerView-->
+<!--                    android:id="@+id/numpost_pho"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"-->
+<!--                    app:spanCount="4"-->
+<!--                    tools:listitem="@layout/row_img_post"/>-->
 
             </LinearLayout>
         </LinearLayout>
@@ -65,11 +78,10 @@
             android:id="@+id/postDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="00:00AM 12/25"
+            android:text="@{post.time}"
             android:textSize="12dp"
             android:textColor="#FF0000"
             android:layout_gravity="end"/>
-
     </LinearLayout>
 
 </com.google.android.material.card.MaterialCardView>

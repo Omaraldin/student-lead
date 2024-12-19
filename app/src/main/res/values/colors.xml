@@ -26,4 +26,6 @@
 
     <color name="or_separator_color">#33000000</color>
     <color name="textInput">#ffE6E6E6</color>
+    <color name="grey">#ECECEC</color>
+    <color name="red">#99DF1717</color>
 </resources>

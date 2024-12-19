@@ -14,7 +14,7 @@
             android:id="@+id/imgIv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:scaleType="centerCrop"
+            android:src="@drawable/ic_img"
             android:adjustViewBounds="true"
             app:shapeAppearanceOverlay="@style/ImageStyle_circle_rounded"/>
 

@@ -1,6 +1,8 @@
 package com.studentlead.ui.home.view;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,6 +14,7 @@ import androidx.fragment.app.FragmentTransaction;
 import com.studentlead.R;
 import com.studentlead.databinding.ActivityHomeBinding;
 import com.studentlead.ui.post.PostFragment;
+import com.studentlead.ui.post.addPostActivity;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -25,7 +28,14 @@ public class HomeActivity extends AppCompatActivity {
         binding = ActivityHomeBinding.inflate(getLayoutInflater());
 
         //show post if done
-        //showPost();
+        showPost();
+
+        binding.addPost.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NextActivity();
+            }
+        });
 
         ViewCompat.setOnApplyWindowInsetsListener(binding.getRoot(), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -34,6 +44,12 @@ public class HomeActivity extends AppCompatActivity {
         });
 
         setContentView(binding.getRoot());
+    }
+
+    private void NextActivity() {
+        Intent intent = new Intent(HomeActivity.this, addPostActivity.class);
+        startActivity(intent);
+        finish(); // Optional: Finish current activity if not needed anymore
     }
 
     private void showPost() {
